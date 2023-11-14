@@ -1,0 +1,32 @@
+package calculaIMC;
+
+import javax.swing.JOptionPane;
+
+public class calculaIMC {
+
+	public static void main(String[] args) {
+
+		String nome = JOptionPane.showInputDialog("Qual o seu nome? ");
+		
+		String pesoStr = JOptionPane.showInputDialog("Qual o seu peso atual? ");
+		double peso = Double.parseDouble(pesoStr);
+		
+		String alturaStr = JOptionPane.showInputDialog("Qual a sua altura? ");;
+		double altura = Double.parseDouble(alturaStr);
+		
+		double imc = peso / (altura * altura);
+		
+		JOptionPane.showMessageDialog(null, "Olá," + nome + "! Seu IMC atual é" + imc);
+		
+		if (imc >= 40) {
+			JOptionPane.showMessageDialog(null, "Você está acima do peso ideal!");
+		}
+		else if (imc >= 25 && imc < 40){
+			JOptionPane.showMessageDialog(null, "Parabéns! Você está em ordem.");
+		}
+		else {
+			JOptionPane.showMessageDialog(null, "Você está abaixo do peso! Coma mais batata frita.");
+		}
+	}
+
+}
