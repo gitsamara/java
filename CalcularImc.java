@@ -16,12 +16,12 @@ public class CalcularImc {
 
 		JOptionPane.showMessageDialog(null, nome + ", seu IMC é " + imc);
 
-		if (imc >= 40) {
-			JOptionPane.showMessageDialog(null, "Você está obeso!");
-		} else if (imc <= 18.5) {
-			JOptionPane.showMessageDialog(null, "Você está abaixo do peso!");
+		if (imc < 18) {
+			JOptionPane.showMessageDialog(null, "Você está abaixo do peso ideal!");
+		} else if (imc >= 18 && imc < 25) {
+			JOptionPane.showMessageDialog(null, "Seu peso está ótimo!");
 		} else {
-			JOptionPane.showMessageDialog(null, "Você está ok!");
+			JOptionPane.showMessageDialog(null, "Procure um profissional da saúde! Você está acima do peso ideal.");
 		}
 
 	}
