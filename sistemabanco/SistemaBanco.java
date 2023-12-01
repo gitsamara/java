@@ -17,8 +17,13 @@ public class SistemaBanco {
 		contaSamara.numeroAgencia = 123;
 		contaSamara.numeroConta = 8859700;
 
+		double valorDeposito = 500;
+		contaSamara.depositar(valorDeposito);
+
 		System.out.println(contaSamara.saldo);
 		System.out.println(contaVagner.saldo);
+
+		double valorSaldo = contaSamara.obterSaldo();
 
 	}
 
