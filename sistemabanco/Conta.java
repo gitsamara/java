@@ -9,11 +9,11 @@ public class Conta {
 	private double saldo;
 
 	// construtor
-	 public Conta(String nomeTitular, int numeroAgencia, int numeroConta, double saldo) {
-	        this.nomeTitular = nomeTitular;
-	        this.numeroAgencia = numeroAgencia;
-	        this.numeroConta = numeroConta;
-	        this.saldo = saldo;
+	public Conta(String nomeTitular, int numeroAgencia, int numeroConta, double saldo) {
+		this.nomeTitular = nomeTitular;
+		this.numeroAgencia = numeroAgencia;
+		this.numeroConta = numeroConta;
+		this.saldo = saldo;
 	}
 
 	// VARIAVEIS LOCAIS (NAO recebem valor padrao)
