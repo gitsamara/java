@@ -48,13 +48,18 @@ public class Ouvidoria {
 		}
 	}
 
-	public void listar() {
+	public void listarOcorrencias() {
+		String listagem = "";
 
-		for (Ocorrencia ocorrencia : ocorrencias) {
-			System.out.println("nº do protocolo: " + ocorrencia.getProtocolo() + " | tipo de manifestação: "
-					+ ocorrencia.getTipoOcorrencia() + " | título: " + ocorrencia.getTitulo() + " | manifestação: "
-					+ ocorrencia.getTexto());
+		if (ocorrencias.size() > 0) {
+			for (Ocorrencia ocorrencia : ocorrencias) {
+				listagem += "Protocolo: " + ocorrencia.getProtocolo() + " | Tipo: " + ocorrencia.getTipoOcorrencia()
+						+ " | Título: " + ocorrencia.getTitulo() + " | Texto: " + ocorrencia.getTexto() + "\n";
+			}
 
+			JOptionPane.showMessageDialog(null, listagem);
+		} else {
+			JOptionPane.showMessageDialog(null, "Não existem ocorrências na ouvidoria!");
 		}
 	}
 
