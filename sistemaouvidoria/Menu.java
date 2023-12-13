@@ -9,13 +9,12 @@ public class Menu {
 		int opcao = 1;
 		Ouvidoria ouvidoriaSamara = new Ouvidoria();
 
-		JOptionPane.showMessageDialog(null,
-				"Sistema de Ouvidoria \n\n" + "1. Listar ocorrências \n" + "2. Adicionar uma nova manifestação \n"
-						+ "3. Remover manifestação \n" + "4. Pesquisar manifestação \n" + "5. Sair do sistema");
+		JOptionPane.showMessageDialog(null, "Bem-vindo ao nosso Sistema de Ouvidoria!");
 
 		while (opcao != 5) {
 
-			String opcaoStr = JOptionPane.showInputDialog("Digite sua opção: ");
+			String opcaoStr = JOptionPane.showInputDialog(
+					"Digite sua opção:\n\n 1. Listar ocorrências registradas\n 2. Adicionar uma nova manifestação\n 3. Remover manifestação\n 4. Pesquisar manifestações\n 5. Sair do sistema");
 			opcao = Integer.parseInt(opcaoStr);
 
 			if (opcao == 1) {
@@ -31,9 +30,10 @@ public class Menu {
 				int protocolo = ouvidoriaSamara.getOcorrencias().size() + 1; // geração automática do número de
 																				// protocolo
 
-				String tipoOcorrencia = JOptionPane.showInputDialog("Digite o tipo da sua manifestação: ");
-				String titulo = JOptionPane.showInputDialog("Digite o título: ");
-				String texto = JOptionPane.showInputDialog("Descreva o que ocorreu: ");
+				String tipoOcorrencia = JOptionPane
+						.showInputDialog("Digite o tipo da sua manifestação (REC, ELO, SUG): ");
+				String titulo = JOptionPane.showInputDialog("Assunto: ");
+				String texto = JOptionPane.showInputDialog("Descrição: ");
 
 				// criação do bd
 
@@ -77,7 +77,7 @@ public class Menu {
 			}
 		}
 
-		JOptionPane.showMessageDialog(null, "Até mais!");
+		JOptionPane.showMessageDialog(null, "Volte sempre! Sua opinião é muito importante.");
 
 	}
 
