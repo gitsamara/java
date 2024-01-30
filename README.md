@@ -1,11 +1,11 @@
 ### Conceitos trabalhados: 
 
-- Pacotes
-- Class
-- Variavéis de Instância
-- Encapsulamento
-- Métodos
-- This
-- Construtores
-- ArrayList
+- Pacotes;
+- Class;
+- Variavéis de Instância;
+- Encapsulamento;
+- Métodos;
+- This;
+- Construtores;
+- ArrayList.
   
